@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# Output files
+tmp/
