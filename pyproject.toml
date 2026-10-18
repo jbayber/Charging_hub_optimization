@@ -17,9 +17,24 @@ dependencies = [
 test = [
     "pytest>=8.0",
 ]
+dev = [
+    "charging_hub_optimization[test]",
+    "ruff>=0.6",
+]
 
 [tool.setuptools]
 packages = ["charging_hub_optimization"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests_py"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+extend-exclude = ["tmp"]
+
+[tool.ruff.lint]
+# Pyflakes, pycodestyle errors, and import sorting.
+select = ["E", "F", "I"]
+# Long lines are left to the formatter (it does not rewrap comments/docstrings).
+ignore = ["E501"]
