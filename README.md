@@ -58,7 +58,7 @@ logger = logging.getLogger(__name__)
 hub = ChargingHub(logger)
 # ... create meters, stations and cars, and connect them (see examples/)
 
-assignment = optimize(logger, hub)   # Dict[Car, float]: current in amps per car
+assignment = optimize(logger, hub)  # Dict[Car, float]: current in amps per car
 hub.apply_current(assignment)
 ```
 
