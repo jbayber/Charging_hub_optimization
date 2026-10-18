@@ -14,6 +14,7 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.13"
+          activate-environment: true
       - run: make install
       - run: make check
 
@@ -29,5 +30,6 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           python-version: ${{ matrix.python-version }}
+          activate-environment: true
       - run: make install
       - run: make test
