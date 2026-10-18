@@ -27,6 +27,10 @@ packages = ["charging_hub_optimization"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests_py"]
+filterwarnings = [
+    # Emitted by ortools' SWIG bindings on Python 3.12+; harmless and not ours to fix.
+    "ignore:builtin type (SwigPyPacked|SwigPyObject|swigvarlink) has no __module__ attribute:DeprecationWarning",
+]
 
 [tool.ruff]
 line-length = 88
